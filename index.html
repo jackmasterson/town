@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang = "en">
+<head>
+	<title>Borough of Sea Girt, NJ</title>
+	<meta name="viewport" content="width=device-width", initial-scale="1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main"></div>
+	<div class="top-nav">
+		<h1 class="header">Welcome</h1>
+		<h2 class="sub-header">To the Borough of Sea Girt</h2>
+	</div>
+	<div class="slider" data-bind="foreach: slider">
+		<img data-bind="attr: {src: src, 'class': classed}, css: {sliderImg: classed}, style: {opacity: opacity, height: height + 'px'}">
+	</div>
+	<button data-bind="click: shifted.right"><</button>
+	<button data-bind="click: shifted.left">></button>
+	<script src="js/lib/knockout-3.2.0.js"></script>
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
