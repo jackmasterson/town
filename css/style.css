@@ -21,10 +21,9 @@ body {
 }
 
 .main {
-	height: 40vh;
+	height: 35vh;
 	width: 100vw;
-	background: url(..//img/sg.jpg);
-	background-size: 100vw 80vh;
+	background-color: #add8e6;
 }
 
 .header {
@@ -43,11 +42,14 @@ body {
 
 .sliderImg {
 	height: auto;
-	margin-top: 25px;
+}
+
+.slider {
+	padding-top: 7vh;
+	margin-bottom: 25px;
 }
 
 .selectedImg {
-	border: 5px solid maroon;
 	opacity: 1;
 	height: auto;
 }
