@@ -68,7 +68,7 @@ var shifted = {
 		//slider.splice(num, 1);
 		
 	//	setTimeout(shifted.left, 2000);
-		console.log(slider[mid]);
+	//	console.log(slider[mid]);
 		picDimensions.init();
 		slider[mid].opacity(null);
 		//slider[mid].width(20);
@@ -89,6 +89,8 @@ var shifted = {
 		classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).addClass('selectedImg');
 		//$(classy).css('opacity', 1);
+		picDimensions.init();
+		slider[mid].opacity(null);
 
 
 	}
@@ -101,10 +103,8 @@ var picDimensions = {
 		for(var i=0; i<slider.length; i++){
 
 			var abs = Math.abs(mid - i);
-			var opac = 1 - ((abs * 0.28) + 0.35);
+			var opac = 1 - ((abs * 0.18) + 0.15);
 			var maxWidth = 100/slider.length - (abs * 2);
-
-
 
 			slider[i].opacity(opac);
 			slider[i].width(maxWidth);
