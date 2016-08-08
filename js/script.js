@@ -72,12 +72,14 @@ var picDimensions = {
 
 			var abs = Math.abs(mid - i);
 			var opac = 1 - ((abs * 0.28) + 0.35);
-			var maxHeight = (slider.length * 33);
-			var height = maxHeight - (abs * 20);
-		
+			//var maxHeight = (slider.length * 33);
+			//var height = maxHeight - (abs * 20);
+			var maxWidth = 100/slider.length - (abs * 2);
+			//console.log(maxWidth);
+
 
 			slider[i].opacity = opac;
-			slider[i].height = height;
+			slider[i].width = maxWidth;
 
 		}
 	}
