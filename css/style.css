@@ -49,5 +49,6 @@ body {
 .selectedImg {
 	border: 5px solid maroon;
 	opacity: 1;
+	height: auto;
 }
 

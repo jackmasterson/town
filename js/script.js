@@ -1,9 +1,34 @@
 var slider = [
-	{src: 'img/stand.jpg', classed: 'first'},
-	{src: 'img/sand.jpg', classed: 'second'},
-	{src: 'img/boat.jpg', classed: 'third'},
-	{src: 'img/bote.jpg', classed: 'fourth'},
-	{src: 'img/pipe.jpg', classed: 'fifth'}
+	{
+		src: 'img/stand.jpg', 
+		classed: 'first',
+		opacity: ko.observable(),
+		width: ko.observable()
+	},
+	{
+		src: 'img/sand.jpg', 
+		classed: 'second',
+		opacity: ko.observable(),
+		width: ko.observable()
+	},
+	{
+		src: 'img/boat.jpg', 
+		classed: 'third',
+		opacity: ko.observable(),
+		width: ko.observable()
+	},
+	{
+		src: 'img/bote.jpg', 
+		classed: 'fourth',
+		opacity: ko.observable(),
+		width: ko.observable()
+	},
+	{
+		src: 'img/pipe.jpg', 
+		classed: 'fifth',
+		opacity: ko.observable(),
+		width: ko.observable()
+	}
 ];
 
 
@@ -12,7 +37,7 @@ var slider = [
 	$(document).ready(function(){ 
 		
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
-		console.log(classy);
+		//console.log(classy);
 		$(classy).addClass('selectedImg');
 		
 
@@ -43,6 +68,11 @@ var shifted = {
 		//slider.splice(num, 1);
 		
 	//	setTimeout(shifted.left, 2000);
+		console.log(slider[mid]);
+		picDimensions.init();
+		slider[mid].opacity(null);
+		//slider[mid].width(20);
+
 
 		
 	},
@@ -72,16 +102,16 @@ var picDimensions = {
 
 			var abs = Math.abs(mid - i);
 			var opac = 1 - ((abs * 0.28) + 0.35);
-			//var maxHeight = (slider.length * 33);
-			//var height = maxHeight - (abs * 20);
 			var maxWidth = 100/slider.length - (abs * 2);
-			//console.log(maxWidth);
 
 
-			slider[i].opacity = opac;
-			slider[i].width = maxWidth;
+
+			slider[i].opacity(opac);
+			slider[i].width(maxWidth);
 
 		}
+		slider[mid].opacity(null);
+		slider[mid].width(20);
 	}
 };
 
