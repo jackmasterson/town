@@ -31,6 +31,18 @@ var slider = [
 	}
 ];
 
+var sections = [
+	{
+		header: "beach"
+	},
+	{
+		header: "safety"
+	},
+	{
+		header: "news"
+	}
+]
+
 
 	var mid = Math.floor(slider.length/2);
 
